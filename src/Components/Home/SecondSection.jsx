@@ -4,7 +4,7 @@ import step3Image from "../../assets/Images/SecondSection_Step3.png";
 
 const SecondSection = () => {
   return (
-    <div className="mt-4 text-center">
+    <div className="mt-4 text-center my-10">
       <h1 className="text-5xl font-bold">How it Works</h1>
       <p className="lg:mx-52 text-lg py-6">
         Our food delivery app works like magic: simply browse, choose, and order

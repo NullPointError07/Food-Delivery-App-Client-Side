@@ -6,6 +6,8 @@ import {
   ArrowSmallUpIcon,
 } from "@heroicons/react/24/solid";
 import SecondSection from "./SecondSection";
+import Restaurants from "./Restaurants";
+import Reviews from "./Reviews";
 
 const Home = () => {
   const [dropdown, setDropDown] = useState(false);
@@ -70,6 +72,8 @@ const Home = () => {
         <img src={homeTopImg} alt="" />
       </div>
       <SecondSection></SecondSection>
+      <Restaurants></Restaurants>
+      <Reviews></Reviews>
     </>
   );
 };

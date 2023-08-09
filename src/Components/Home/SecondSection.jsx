@@ -6,7 +6,7 @@ const SecondSection = () => {
   return (
     <div className="mt-4 text-center my-10">
       <h1 className="text-5xl font-bold">How it Works</h1>
-      <p className="lg:mx-52 text-lg py-6">
+      <p className="lg:mx-52 text-lg py-6 text-gray-400">
         Our food delivery app works like magic: simply browse, choose, and order
         from a variety of local restaurants. Our dedicated drivers swiftly pick
         up your order and bring it to your doorstep, ensuring your cravings are
@@ -15,10 +15,10 @@ const SecondSection = () => {
       <div className="flex justify-between space-x-20">
         <div className="flex flex-col items-center text-center space-y-3">
           <img src={step1Image} alt="" />
-          <h1>
+          <h1 className="text-3xl font-bold">
             <span>01 </span>Select Restaurant
           </h1>
-          <p>
+          <p className="text-xl text-gray-400">
             Discover a world of flavors with our app. Handpick your favorite
             restaurant, and we will bring their delicious offerings right to
             you.
@@ -26,10 +26,10 @@ const SecondSection = () => {
         </div>
         <div className="flex flex-col items-center text-center space-y-3">
           <img src={step2Image} alt="" />
-          <h1>
+          <h1 className="text-3xl font-bold">
             <span>02 </span>Select Menu
           </h1>
-          <p>
+          <p className="text-xl text-gray-400">
             Craft your ideal meal effortlessly. Our app lets you handpick dishes
             from the restaurant menu, ensuring every bite is tailored to your
             cravings and preferences.
@@ -37,10 +37,10 @@ const SecondSection = () => {
         </div>
         <div className="flex flex-col items-center text-center space-y-3">
           <img src={step3Image} alt="" />
-          <h1>
+          <h1 className="text-3xl font-bold">
             <span>03 </span>Wait for Delivery
           </h1>
-          <p>
+          <p className="text-xl text-gray-400">
             Savor the wait with eagerness. Your selected delights are in good
             hands. We are on our way to bring your chosen flavors straight to
             you.

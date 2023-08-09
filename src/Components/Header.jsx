@@ -8,7 +8,7 @@ const Header = () => {
           Quick<span className="text-orange-500">Eat</span>
         </h1>
       </Link>
-      <div className="flex space-x-4">
+      <div className="flex space-x-4 text-lg">
         <NavLink>
           <p>Home</p>
         </NavLink>

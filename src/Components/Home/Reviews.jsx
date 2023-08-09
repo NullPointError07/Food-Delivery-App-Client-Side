@@ -1,6 +1,6 @@
 const Reviews = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0 lg:space-x-4">
+    <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0 lg:space-x-4 my-6">
       <div>
         <h1 className="text-5xl font-semibold mb-2">
           Service Shows <br /> Good Taste

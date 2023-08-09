@@ -43,7 +43,8 @@ const Restaurants = () => {
               />
             </div>
             <div>
-              <Link>
+              {/* to navigate it to a new route i used Link*/}
+              <Link to={`restaurant/${restaurant.id.toString()}`}>
                 <h1 className="text-2xl font-bold">
                   {restaurant.restaurant_name}
                 </h1>

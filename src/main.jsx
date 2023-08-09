@@ -7,6 +7,7 @@ import Home from "./Components/Home/Home.jsx";
 import Login from "./Components/Authentication/Login.jsx";
 import SignUp from "./Components/Authentication/SignUp.jsx";
 import AuthProver from "./Components/Authentication/AuthProver.jsx";
+import RestaurantDetails from "./Components/Home/RestaurantDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "restaurant/:id",
+        element: <RestaurantDetails></RestaurantDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/${params.id}`),
       },
       {
         path: "/login",

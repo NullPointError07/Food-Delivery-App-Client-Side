@@ -21,7 +21,8 @@ const router = createBrowserRouter([
       {
         path: "restaurant/:id",
         element: <RestaurantDetails></RestaurantDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`https://food-delivery-server-zeta.vercel.app/${params.id}`),
       },
       {
         path: "/login",

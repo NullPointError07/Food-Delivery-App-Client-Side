@@ -7,9 +7,10 @@ const Restaurants = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch(
-          "https://food-delivery-server-zeta.vercel.app/"
-        );
+        // const response = await fetch(
+        //   "https://food-delivery-server-rouge.vercel.app/"
+        // );
+        const response = await fetch("http://localhost:5000/");
         const data = await response.json();
         setRestaurants(data);
         // console.log(data); [testing purpose]

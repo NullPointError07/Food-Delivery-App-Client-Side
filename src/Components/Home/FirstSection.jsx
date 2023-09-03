@@ -1,10 +1,10 @@
-import { useState } from "react";
-import homeTopImg from "../../assets/Images/HomeTopImage.png";
-import { Link } from "react-router-dom";
 import {
   ArrowSmallDownIcon,
   ArrowSmallUpIcon,
 } from "@heroicons/react/24/solid";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import homeTopImg from "../../assets/Images/HomeTopImage.png";
 
 const FirstSection = () => {
   const [dropdown, setDropDown] = useState(false);

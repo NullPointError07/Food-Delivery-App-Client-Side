@@ -3,14 +3,21 @@ import { Link } from "react-router-dom";
 
 const Restaurants = () => {
   const [restaurants, setRestaurants] = useState([]);
+  const [seeAll, setSeeAll] = useState(false);
+  const [showLoader, setShowLoader] = useState(true);
+
+  const handleSeeAll = () => {
+    setSeeAll(true);
+  };
 
   useEffect(() => {
     async function fetchData() {
       try {
-        // const response = await fetch(
-        //   "https://food-delivery-server-rouge.vercel.app/"
-        // );
-        const response = await fetch("http://localhost:5000/");
+        const response = await fetch(
+          "https://food-delivery-server-phi.vercel.app/"
+        );
+        setShowLoader();
+        // const response = await fetch("http://localhost:5000/");
         const data = await response.json();
         setRestaurants(data);
         // console.log(data); [testing purpose]
@@ -24,6 +31,8 @@ const Restaurants = () => {
 
   //   console.log(restaurants); [Another testing purpose]
 
+  const displayRestaurants = seeAll ? restaurants : restaurants.slice(0, 4);
+
   return (
     <div>
       <h1 className="text-5xl">12 Best Restaurants In Your City</h1>
@@ -32,8 +41,9 @@ const Restaurants = () => {
         city has to offer. From cozy cafes to upscale dining establishments,
         these culinary havens promise unforgettable experiences for every palate
       </p>
+      {showLoader && <span className="loading loading-bars loading-lg"></span>}
       <div className="grid lg:grid-cols-2 gap-4">
-        {restaurants.map((restaurant) => (
+        {displayRestaurants.map((restaurant) => (
           <div
             key={restaurant.id}
             className="border-2 flex lg:flex-row md:flex-col sm:flex-col space-x-2 bg-gray-50 text-left p-6"
@@ -68,7 +78,14 @@ const Restaurants = () => {
           </div>
         ))}
       </div>
-      <button className="btn p-4 hover:bg-orange-500 mt-4">SEE ALL</button>
+      {restaurants.length > 4 && !seeAll && (
+        <button
+          className="btn p-4 hover:bg-orange-500 mt-4"
+          onClick={handleSeeAll}
+        >
+          See All
+        </button>
+      )}
     </div>
   );
 };

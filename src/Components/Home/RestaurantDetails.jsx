@@ -1,11 +1,8 @@
 import { useLoaderData } from "react-router-dom";
+import Menus from "./Menus";
 
 const RestaurantDetails = () => {
   const restaurant = useLoaderData();
-
-  const Breakfast = restaurant.menus.breakfast
-    ? restaurant.menus.breakfast
-    : null;
 
   return (
     <div>
@@ -44,7 +41,7 @@ const RestaurantDetails = () => {
             </button>
           ))}
           <p className="my-3 text-sm text-gray-400">Opening Hours:</p>
-          <p>
+          <p className="mb-10">
             {" "}
             {restaurant.opening_time} to {restaurant.closing_time}
           </p>
@@ -57,20 +54,7 @@ const RestaurantDetails = () => {
           />
         </div>
       </section>
-      {Breakfast && (
-        <>
-          <h1>Breakfast</h1>
-          <ul>
-            {Breakfast.items.map((item, index) => (
-              <li key={index}>
-                <img src={item.image} alt={item.name} />
-                <p>{item.name}</p>
-                <p>Price: ${item.price}</p>
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
+      <Menus restaurant={restaurant}></Menus>
     </div>
   );
 };

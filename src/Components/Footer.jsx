@@ -5,7 +5,7 @@ import ArrowRight from "../assets/Images/ArrowRight";
 const Footer = () => {
   return (
     <footer className="bg-gray-600 text-white text-left py-10 mt-10">
-      <div className="container mx-auto grid grid-cols-3 gap-4 pl-10">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-10 pl-10">
         <div className="left-content">
           <h1 className="text-2xl mb-4">QUICKEAT</h1>
           <h1 className="font-bold text-5xl mb-5">
@@ -17,7 +17,7 @@ const Footer = () => {
             pretium quam.
           </p>
         </div>
-        <div className="flex flex-col pl-28 space-y-6 text-xl">
+        <div className="flex flex-col pl-28 space-y-6 text-xl text-left">
           <div>
             <h1 className="text-2xl">MENU</h1>
           </div>

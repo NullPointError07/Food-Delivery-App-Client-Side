@@ -21,7 +21,7 @@ const Banner = () => {
 
   return (
     <div>
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col md:flex-row space-y-6 justify-between items-center">
         <div className="w=1/2 text-left">
           <h1 className="text-8xl">Best Restaurant In Your Home</h1>
           <p className="my-4 text-xl text-gray-400">

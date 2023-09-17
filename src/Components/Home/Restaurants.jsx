@@ -46,7 +46,7 @@ const Restaurants = () => {
         {displayRestaurants.map((restaurant) => (
           <div
             key={restaurant.id}
-            className="border-2 flex lg:flex-row md:flex-col sm:flex-col space-x-2 bg-gray-50 text-left p-6"
+            className="border-2 flex flex-col space-y-3 md:flex-row space-x-2 bg-gray-50 text-left p-6"
           >
             <div className="lg:w-1/2">
               <img
@@ -55,7 +55,7 @@ const Restaurants = () => {
                 alt=""
               />
             </div>
-            <div>
+            <div className="flex flex-col space-y-2">
               {/* to navigate it to a new route i used Link*/}
               <Link to={`restaurant/${restaurant.id.toString()}`}>
                 <h1 className="text-2xl font-bold">

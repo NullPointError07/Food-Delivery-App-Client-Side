@@ -5,7 +5,7 @@ const RestaurantDetails = () => {
   const restaurant = useLoaderData();
 
   return (
-    <div>
+    <div className="mx-12">
       <section className="flex justify-between space-x-8 mt-10">
         <div className="text-left  w-2/5">
           <div className="flex space-x-4">

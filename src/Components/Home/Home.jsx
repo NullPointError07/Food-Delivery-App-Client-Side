@@ -1,15 +1,15 @@
-import FirstSection from "./FirstSection";
-import SecondSection from "./SecondSection";
+import Banner from "./Banner";
 import Restaurants from "./Restaurants";
 import Reviews from "./Reviews";
+import SecondSection from "./SecondSection";
 
 const Home = () => {
   return (
     <>
-      <FirstSection></FirstSection>
-      <SecondSection></SecondSection>
-      <Restaurants></Restaurants>
-      <Reviews></Reviews>
+      <Banner />
+      <SecondSection />
+      <Restaurants />
+      <Reviews />
     </>
   );
 };

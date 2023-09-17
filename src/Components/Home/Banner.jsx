@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import homeTopImg from "../../assets/Images/HomeTopImage.png";
 
-const FirstSection = () => {
+const Banner = () => {
   const [dropdown, setDropDown] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -72,4 +72,4 @@ const FirstSection = () => {
   );
 };
 
-export default FirstSection;
+export default Banner;

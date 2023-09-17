@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./index.css";
-import Home from "./Components/Home/Home.jsx";
+import App from "./App.jsx";
+import AuthProver from "./Components/Authentication/AuthProver.jsx";
 import Login from "./Components/Authentication/Login.jsx";
 import SignUp from "./Components/Authentication/SignUp.jsx";
-import AuthProver from "./Components/Authentication/AuthProver.jsx";
+import Home from "./Components/Home/Home.jsx";
 import RestaurantDetails from "./Components/Home/RestaurantDetails.jsx";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
